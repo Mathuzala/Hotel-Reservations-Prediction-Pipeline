@@ -36,7 +36,7 @@ The project used different machine learning models to predict hotel booking canc
 2. Navigate to the directory containing `app.py`.
 3. Run the command `python app4.py` to start the Flask server.
 4. Open a web browser and go to the URL provided by the Flask server (usually `http://127.0.0.1:5000/`).
-5. You should see the following front-end as shown below:
+5. You should see the following front-end as shown below and you can now inut data and draw predictions:
 
    ![image](https://github.com/Mathuzala/Hotel-Reservations-Prediction-Pipeline/assets/44985594/76aa416a-fa45-41bc-a0ee-1934b0af8792)
 
