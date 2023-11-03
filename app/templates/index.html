@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+    <form class="well form-horizontal" action="{{ url_for('submit') }}" method="post"  id="contact_form">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Hotel Reservation Prediction Form</legend>
+
+    <!-- Number input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Number of Adults</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="no_of_adults" placeholder="How many adults..." class="form-control" type="number">
+        </div>
+        </div>
+    </div>
+    
+    <!-- Number input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Number of Children</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="no_of_children" placeholder="How many children..." class="form-control" type="number">
+        </div>
+        </div>
+    </div>
+
+    <!-- Number input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Number of Weekend Nights</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+            <input name="no_of_weekend_nights" placeholder="# of Weekend Nights..." class="form-control" type="number">
+        </div>
+        </div>
+    </div>
+
+    <!-- Number input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Number of Week Nights</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+            <input name="no_of_week_nights" placeholder="# of Week Nights..." class="form-control" type="number">
+        </div>
+        </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group"> 
+        <label class="col-md-4 control-label">Type of Meal Plan</label>
+            <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="type_of_meal_plan" class="form-control selectpicker" > <!-- Changed name attribute -->
+            <option value=" " >Please select your meal plan</option>
+            <option>Meal Plan 1</option>
+            <option>Meal Plan 2</option>
+            <option>Meal Plan 3</option>
+            <option>Not Selected</option>
+            </select>
+        </div>
+        </div>
+        </div>
+
+    <!-- Number input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Required Parking Space</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+            <input name="required_car_parking_space" placeholder="0 for No, 1 for Yes" class="form-control" type="number">
+        </div>
+        </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group"> 
+        <label class="col-md-4 control-label">Type of Room Reserved</label>
+            <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="room_type_reserved" class="form-control selectpicker" > <!-- Changed name attribute -->
+            <option value=" " >Please select your room type</option>
+            <option>Room_Type 1</option>
+            <option>Room_Type 2</option>
+            <option>Room_Type 3</option>
+            <option>Room_Type 4</option>
+            <option>Room_Type 5</option>
+            <option>Room_Type 6</option>
+            <option>Room_Type 7</option>
+            </select>
+        </div>
+        </div>
+        </div>
+
+    <!-- Text input-->
+        <div class="form-group">
+    <label class="col-md-4 control-label">Lead Time</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+    <input name="lead_time" placeholder="How many days in advance..." class="form-control"  type="text">
+        </div>
+    </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Arrival Year</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        <input name="arrival_year" placeholder="Which year did they book..." class="form-control"  type="text">
+            </div>
+        </div>
+        </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+    <label class="col-md-4 control-label">Arrival Month</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input name="arrival_month" placeholder="0 - 12" class="form-control" type="text">
+        </div>
+    </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+    <label class="col-md-4 control-label">Arrival Day</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input name="arrival_date" placeholder="Which day of the month..." class="form-control" type="text">
+        </div>
+    </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group"> 
+        <label class="col-md-4 control-label">Market Segment</label>
+            <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="market_segment_type" class="form-control selectpicker" >
+            <option value=" " >Which market segment are they?</option>
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Aviation</option>
+            <option>Corporate</option>
+            <option>Complementary</option>
+            </select>
+        </div>
+        </div>
+        </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label">Repeated Guest</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+        <input name="repeated_guest" placeholder="0 for No, 1 for Yes" class="form-control" type="text">
+            </div>
+        </div>
+        </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+    <label class="col-md-4 control-label">Average Price per Room</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+    <input name="avg_price_per_room" placeholder="Input price..." class="form-control"  type="text">
+        </div>
+    </div>
+    </div>
+
+    <!-- Text input-->
+
+    <div class="form-group">
+    <label class="col-md-4 control-label">Number of Special Requests</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-alert"></i></span>
+    <input name="no_of_special_requests" placeholder="How many requests..." class="form-control"  type="text">
+        </div>
+    </div>
+    </div>
+
+    <!-- Success message -->
+    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+    <!-- Button -->
+    <div class="form-group">
+    <label class="col-md-4 control-label"></label>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-warning" >Submit <span class="glyphicon glyphicon-send"></span></button>
+    </div>
+    </div>
+
+    </fieldset>
+    </form>
+
+    <div class="graph-container">
+        <div class="graph">
+            <img src="{{ url_for('static', filename='market_segment_type.png') }}" alt="Market Segment Type">
+            <p>This graph shows the relationship between the market segment type and the likelihood of a booking being canceled. The data indicates that certain market segments have a higher likelihood of cancellations, which can be valuable information for the hotel to identify and target specific market segments.</p>
+        </div>
+        
+        <div class="graph">
+            <img src="{{ url_for('static', filename='lead_time.png') }}" alt="Lead Time">
+            <p>This graph demonstrates the correlation between lead time and booking cancellations. As observed, there is a positive correlation, indicating that bookings made well in advance are more likely to be canceled. This insight can be used by the hotel to implement strategies such as early bird discounts or stricter cancellation policies to reduce cancellations.</p>
+        </div>
+        
+        <div class="graph">
+            <img src="{{ url_for('static', filename='avg_price_per_room.png') }}" alt="Average Price Per Room">
+            <p>This graph illustrates the relationship between the average price per room and the likelihood of a booking being canceled. A negative correlation is observed, indicating that bookings with a higher average price per room are less likely to be canceled. This insight can be used to improve guest satisfaction by offering better value or quality, thereby reducing cancellations.</p>
+        </div>
+        
+    </div>
+    </div>
+
+        </div><!-- /.container -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

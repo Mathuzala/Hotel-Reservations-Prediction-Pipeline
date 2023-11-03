@@ -1,0 +1,18 @@
+#success_message{ display: none;}
+
+.graph-container {
+    text-align: center;
+}
+
+.graph img {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.graph p {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
