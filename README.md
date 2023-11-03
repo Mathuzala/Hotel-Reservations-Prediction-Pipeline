@@ -28,7 +28,7 @@ The motivation for this project is to predict whether a customer will honor a ho
 - 'Hotel Reservations Project.ipynb - The Jupyter notebook contains the data analysis, visualization, and machine learning model development process for predicting hotel booking cancellations.
   
 ## Summary of Results
-The project used different machine learning models to predict hotel booking cancellations. The Random Forest classifier achieved the highest accuracy of approximately 88.6% on the test data.
+The project used different machine learning models to predict hotel booking cancellations. The Random Forest classifier achieved the highest accuracy of approximately 90.5% on the test data.
 
 ## Launching the Flask App
 1. Install the necessary libraries listed in `requirements.txt` using the command `pip install -r requirements.txt`.
