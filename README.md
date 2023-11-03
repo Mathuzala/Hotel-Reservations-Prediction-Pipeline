@@ -20,8 +20,7 @@ The motivation for this project is to predict whether a customer will honor a ho
 - `Hotel Reservations.csv` - The dataset used for the analysis and model training. It contains 36,275 entries with 19 columns, including features like the number of adults, children, weekend nights, week nights, meal plan, room type, lead time, and more. The target variable is 'booking_status'.
 - `preprocess.py` This file contains the preprocessing functions used to clean and prepare the data for model training. It may include functions for handling missing values, encoding categorical variables, and normalizing numerical variables.
 - `training.py` This file contains the code for training the machine learning model. It loads the preprocessed data, splits it into training and testing sets, trains the model, and evaluates its performance. The trained model is then saved for future use.
-- `preprocessor.pkl` - The preprocessor file used to preprocess the data before feeding it into the machine learning model.
-- `app4.py` - The Flask app file that is used to deploy the model as a web application.
+- `app.py` - The Flask app file that is used to deploy the model as a web application.
 - `requirements.txt` - The file containing the list of libraries and their versions required to run the project.
 - `index.html` - The HTML file for the homepage of the web application.
 - `script.js` - The JavaScript file used to add interactivity to the web application.
